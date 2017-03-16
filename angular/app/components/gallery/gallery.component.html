@@ -1,2 +1,6 @@
 Nasa Photos
-<img ng-repeat="photo in vm.photos" width="100px" ng-src="{{photo.img_src}}">
+<div infinite-scroll="vm.addMoreItems()">
+    <img ng-repeat="photo in vm.photos" width="100px" ng-src="{{photo.img_src}}">
+</div>
+
+<div ng-show="vm.inprogress">Loading...</div>

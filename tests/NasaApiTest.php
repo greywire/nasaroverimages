@@ -14,7 +14,7 @@ class NasaApiTest extends TestCase
     public function testFHAC()
     {
 
-        $response = $this->json('GET', '/api/fhac');
-        $response->assertJson('{"photos" : []}');
+        $response = $this->json('GET', '/api/fhac/1');
+        $response->seeJsonArray('photos');
     }
 }

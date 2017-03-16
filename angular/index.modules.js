@@ -6,8 +6,11 @@ angular.module('app', [
     'app.directives',
 	'app.routes',
 	'app.config',
-	'app.partials'
+	'app.partials',
+	'infinite-scroll'
 ]);
+
+angular.module('infinite-scroll').value('THROTTLE_MILLISECONDS', 1000);
 
 angular.module('app.run', []);
 angular.module('app.routes', []);
