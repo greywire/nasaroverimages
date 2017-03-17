@@ -1,6 +1,6 @@
 Nasa Photos
 <div infinite-scroll="vm.addMoreItems()">
-    <img ng-repeat="photo in vm.photos" width="100px" ng-src="{{photo.img_src}}">
+    <img ng-repeat="photo in vm.photos" width="100px" ng-src="{{photo.img_src}}" bigview>
 </div>
 
 <div ng-show="vm.inprogress">Loading...</div>
