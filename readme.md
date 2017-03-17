@@ -6,7 +6,7 @@ Simple test app using Angular, Laravel and Angular Material.
 * API service in angular/services/API.service.js which calls to the Laravel API on the backend
 * PHP API call in Laravel at app/Http/Controllers/GetFHACController.php which is a proxy call to the NASA API
 * infinite scroll using ngInfiniteScroll bower component
-* There is no need to implement a directive as the gallery component does everything needed. Directives are for decorating dom, which don't need to do.
+* larger image view implemented as a directive (angular/app/directives/bigview)
 
 In addition:
 * Unit test for the backend api call in tests/NasaApiTest.php
