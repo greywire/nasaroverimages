@@ -34,4 +34,4 @@ $api->group(['middleware' => ['api']], function ($api) {
 $api->group(['middleware' => ['api', 'api.auth']], function ($api) {
 });
 
-$api->get('fhac/{page}', 'GetFHACController@getimages');
+$api->get('fhac/{sol}/{cam}/{page}', 'GetFHACController@getimages');

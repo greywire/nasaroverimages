@@ -1,6 +1,55 @@
-Nasa Photos
+<h2 class="md-headline">Nasa Photos: Curiousity</h2>
+
+<div layout="row">
+<md-input-container layout="column">
+    <label>Camera</label>
+    <md-select ng-model="vm.cam" ng-change="vm.changeCam()">
+        <md-option value="FHAZ">Front Hazard Avoidance Camera</md-option>
+        <md-option value="RHAZ">Rear Hazard Avoidance Camera</md-option>
+        <md-option value="MAST">Mast Camera</md-option>
+        <md-option value="CHEMCAM">Chemistry and Camera Complex</md-option>
+        <md-option value="MAHLI">Mars Hand Lens Imager</md-option>
+        <md-option value="MARDI">Mars Descent Imager</md-option>
+        <md-option value="NAVCAM">Navigation Camera</md-option>
+    </md-select>
+</md-input-container>
+
+<md-input-container layout="column">
+    <label>Sol</label>
+    <input type="text" ng-model="vm.sol" ng-change="vm.changeCam()">
+</md-input-container>
+</div>
+
 <div infinite-scroll="vm.addMoreItems()">
-    <img ng-repeat="photo in vm.photos" width="100px" ng-src="{{photo.img_src}}" bigview>
+    <div ng-if="vm.photos.length > 0">
+
+        <div layout="row"  ng-repeat="photos in vm.photos | chunkBy:4" show-sm hide-gt-sm>
+            <span ng-repeat="photo in photos" layout="column">
+                <div>
+                    <img width="100px" height="100pz"  ng-src="{{photo.img_src}}" bigview>
+                </div>
+                <div>
+                    Earth Date: {{photo.earth_date}}
+                </div>
+
+            </span>
+        </div>
+
+        <div layout="row"  ng-repeat="photos in vm.photos | chunkBy:8" hide-sm hide-xs>
+            <span ng-repeat="photo in photos" layout="column">
+                <div>
+                    <img width="100px" height="100pz"  ng-src="{{photo.img_src}}" bigview>
+                </div>
+                <div>
+                    Earth Date: {{photo.earth_date}}
+                </div>
+
+            </span>
+        </div>
+    </div>
+    <div ng-if="vm.photos.length == 0">
+        There are no photos
+    </div>
 </div>
 
 <div ng-show="vm.inprogress">Loading...</div>
