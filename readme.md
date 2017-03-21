@@ -22,5 +22,8 @@ Notes:
 * NASA api does not seem to acknowledge the page parameter, instead it just returns everything. PHP API does the paging instead, so
 the angular front end doesn't try to display everything at once.
 
+* Added the .env settings file, but normally you wouldn't want this in the repo because it contains passwords and such, and, you wouldn't
+want to wipe out the settings on your servers (dev, stage, and live.. all of which would have different configs probably).
+
 TODO:
 NASA api call should be cached.
