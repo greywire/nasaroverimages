@@ -2,7 +2,6 @@
 /node_modules
 Homestead.yaml
 Homestead.json
-.env
 .idea/
 /bower_components
 npm-debug.log

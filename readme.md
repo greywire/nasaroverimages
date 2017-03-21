@@ -11,6 +11,13 @@ Simple test app using Angular, Laravel and Angular Material.
 In addition:
 * Unit test for the backend api call in tests/NasaApiTest.php
 
+Getting it up and running:
+
+bower install
+composer install
+gulp
+php artisan serve
+
 Notes:
 * NASA api does not seem to acknowledge the page parameter, instead it just returns everything. PHP API does the paging instead, so
 the angular front end doesn't try to display everything at once.
